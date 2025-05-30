@@ -1,26 +1,172 @@
-@import "tailwindcss";
+/* ModernUI.css */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.modern-container {
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid rgba(59, 130, 246, 0.1); /* Tailwind border-blue-500 with opacity */
+  border-radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.modern-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 600;
+  text-align: center;
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.modern-input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.modern-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+
+.modern-input:focus {
+  outline: none;
+  border-color: #3b82f6; /* ring-blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.modern-button {
+  padding: 0.75rem 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.modern-button.add {
+  background-color: #3b82f6;
+}
+
+.modern-button.add:hover {
+  background-color: #1d4ed8;
+}
+
+.modern-items {
+  margin-top: 1.5rem;
+}
+
+.modern-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f4f6; /* bg-gray-100 */
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* shadow-md */
+}
+
+.modern-item-slug {
+  font-size: 1.125rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 75%;
+}
+
+.modern-button.edit {
+  background-color: #22c55e;
+  margin-right: 0.5rem;
+}
+
+.modern-button.edit:hover {
+  background-color: #15803d;
+}
+
+.modern-button.delete {
+  background-color: #ef4444;
+}
+
+.modern-button.delete:hover {
+  background-color: #b91c1c;
+}
+
+.modern-empty {
+  text-align: center;
+  color: #6b7280; /* text-gray-500 */
+}
+
+.modern-actions {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.modern-button.generate {
+  background-color: #22c55e;
+}
+
+.modern-button.generate:hover {
+  background-color: #15803d;
+}
+
+.modern-button.preview {
+  background-color: #f59e0b;
+  margin-left: 1rem;
+}
+
+.modern-button.preview:hover {
+  background-color: #b45309;
+}
+
+.modern-button.disabled {
+  background-color: #9ca3af !important; /* bg-gray-400 */
+  cursor: not-allowed;
+}
+
+/* PreviewPage.css */
+
+.preview-container {
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid rgba(59, 130, 246, 0.1); /* Tailwind border-blue-500 opacity-10 */
+  border-radius: 0.5rem;
+}
+
+.preview-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 600;
+  text-align: center;
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 1.5rem;
+}
+
+.preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 */
+}
+
+.preview-item {
+  background-color: #f3f4f6; /* bg-gray-100 */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* shadow-md */
+}
+
+.preview-item-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.description-text {
+  line-height: 1.6;
 }
